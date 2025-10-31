@@ -55,12 +55,13 @@ body {
 }
 .card__description {
   margin-bottom: 18px;
-  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
 }
 .card__prices {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .card__price--new {
   color: hsl(158, 36%, 37%);
@@ -89,6 +90,9 @@ body {
   display: flex;
   justify-content: center;
 }
+.card__button:hover, .card__button:active {
+  background-color: hsl(158, 42%, 18%);
+}
 .card__button img {
   margin-right: 0.5rem;
 }
@@ -111,6 +115,7 @@ body {
   .card__content {
     display: block;
     width: 50%;
+    padding-top: 42px;
   }
   .card__title {
     font-size: 3rem;
