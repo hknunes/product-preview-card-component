@@ -19,10 +19,9 @@ main {
 
 .card {
   background-color: hsl(0, 0%, 100%);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  max-width: clamp(200px, 90vw, 400px);
+  max-width: clamp(14.286rem, 90vw, 28.571rem);
   border-radius: 15px;
   overflow: hidden;
   margin-top: 3rem;
@@ -101,7 +100,7 @@ main {
 @media (min-width: 90rem) {
   .card {
     flex-direction: row;
-    max-width: clamp(500px, 90vw, 700px);
+    max-width: clamp(35.714rem, 90vw, 50rem);
   }
   .card__image {
     width: 50%;
