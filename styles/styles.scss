@@ -1,0 +1,170 @@
+$font-stack: "Montserrat", sans-serif;
+$primary-color: hsl(158, 36%, 37%);
+$secondary-color: hsl(158, 42%, 18%);
+$black: hsl(212, 21%, 14%);
+$grey: hsl(228, 12%, 48%);
+$cream: hsl(30, 38%, 92%);
+$white: hsl(0, 0%, 100%);
+$layout-breakpoint-mobile: 375px;
+$layout-breakpoint-desktop: 1440px;
+
+
+
+html {
+    font-family: $font-stack;
+    font-size: 14px;
+    font-weight: 500;
+    color: $grey;
+
+    TODO: REsponsive font size
+}
+
+body {
+    background-color: $cream;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    overflow: auto;
+    /* centra horizontal e vertical de uma vez */
+}
+
+.card {
+    background-color: $white;
+    // width: 350px;
+    // border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: clamp(200px, 90vw, 400px);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    &__image {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+
+            &.img-desktop {
+                display: none;
+            }
+        }
+    }
+
+    &__content {
+        padding: 32px;
+        box-sizing: border-box
+    }
+
+    &__category {
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        color: $grey;
+        font-size: 0.9rem;
+    }
+
+    &__title {
+        font-family: "Fraunces", serif;
+        font-weight: 700;
+        font-size: 2.2rem;
+        line-height: 1;
+        color: $black;
+    }
+
+    &__description {
+        margin-bottom: 18px;
+        font-size: clamp(1rem, 1.2vw, 1.5rem);
+    }
+
+    &__prices {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__price {
+        &--new {
+            color: $primary-color;
+            font-family: "Fraunces", serif;
+            font-weight: 700;
+            font-size: 2.2rem;
+        }
+
+        &--old {
+            text-decoration: line-through;
+            display: grid;
+            place-items: center;
+        }
+    }
+
+    &__button {
+        font-family: $font-stack;
+        background-color: $primary-color;
+        border: none;
+        border-radius: 6px;
+        color: $white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        img {
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+
+@media (min-width: $layout-breakpoint-desktop) {
+    .card {
+        flex-direction: row;
+        max-width: clamp(500px, 90vw, 700px);
+
+        &__image {
+            width: 50%;
+            display: block;
+
+            img {
+
+                &.img-mobile {
+                    display: none;
+                }
+
+                &.img-desktop {
+                    display: block;
+                }
+            }
+        }
+
+        &__content {
+            display: block;
+            width: 50%;
+        }
+
+        &__title {
+            font-size: 3rem;
+        }
+    }
+}
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
