@@ -1,6 +1,6 @@
 html {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   color: hsl(228, 12%, 48%);
 }
@@ -11,7 +11,10 @@ body {
   place-items: center;
   min-height: 100vh;
   overflow: auto;
-  /* centra horizontal e vertical de uma vez */
+}
+
+main {
+  position: relative;
 }
 
 .card {
@@ -83,7 +86,6 @@ body {
   text-align: center;
   text-decoration: none;
   font-weight: 700;
-  display: inline-block;
   cursor: pointer;
   width: 100%;
   display: flex;
@@ -96,7 +98,7 @@ body {
   margin-right: 0.5rem;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 90rem) {
   .card {
     flex-direction: row;
     max-width: clamp(500px, 90vw, 700px);
