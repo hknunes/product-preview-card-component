@@ -53,7 +53,7 @@ main {
     }
 
     &__content {
-        padding: 32px;
+        padding: 2rem;
         box-sizing: border-box
     }
 
@@ -73,7 +73,7 @@ main {
     }
 
     &__description {
-        margin-bottom: 18px;
+        margin-bottom: 1.125rem;
         font-size: clamp(1rem, 1.2vw, 1.2rem);
     }
 
@@ -105,7 +105,7 @@ main {
         border: none;
         border-radius: 6px;
         color: $white;
-        padding: 15px 32px;
+        padding: 0.938rem 2rem;
         text-align: center;
         text-decoration: none;
         font-weight: 700;
@@ -150,7 +150,7 @@ main {
         &__content {
             display: block;
             width: 50%;
-            padding-top: 42px;
+            padding-top: 2.625rem;
         }
 
         &__title {
